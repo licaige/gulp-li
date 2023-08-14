@@ -1,16 +1,20 @@
-/**
- * @description: gulp配置文件
- * @author: guang.shi <https://blog.csdn.net/guang_s>
- * @date: 2018-12-13 17:53:40
- */
 'use strict'
-
 var gulp = require('gulp')
 var fs = require('fs') // 创建文件
 var babel = require('gulp-babel') // 编译es6
 var htmltpl = require('gulp-html-tpl') // 引用html模板
 var artTemplate = require('art-template') // 模板渲染
 var concat = require('gulp-concat') // 合并文件
+/**
+ * options {String or Object or Function} 这里以{Object}为例
+ * {
+ * 	dirname: "js",		文件路径
+ * 	basename: "main",	文件名
+ * 	prefix: "",		文件名前缀
+ * 	suffix: ".min",	文件名后缀
+ * 	extname: ".js"		文件扩展名
+ * }
+ */
 var rename = require('gulp-rename') // 重命名
 var clean = require('gulp-clean') // 清空文件夹
 var gulpif = require('gulp-if') // 条件判断
